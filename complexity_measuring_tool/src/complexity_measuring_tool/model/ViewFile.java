@@ -23,6 +23,12 @@ public class ViewFile {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public ViewFile(String fileName, String date) {
+		super();
+		this.fileName = fileName;
+		this.date = date;
+	}
 
 
 	public ViewFile(String fileName, String date, int cs, int cns, int cts, int ci, int cr, int tw, int cps) {

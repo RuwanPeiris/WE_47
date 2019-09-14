@@ -52,7 +52,11 @@ public class FileAccess {
 			throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
 
 		Connection connection = DBConnection.getInstance().getConnection();
-		String sql = "SELECT * FROM file";
+		//Each file total each complexity values
+		String sql = "select f.fileId,f.fileName,f.date,sum(r.cs) tcs,sum(r.cns) tcns,sum(r.cts) tcts,sum(r.ci) tci,sum(r.cr) tcr,sum(r.tw) ttw,sum(r.cps) tcps\r\n" + 
+				"from file f,records r\r\n" + 
+				"where f.fileId=r.fileId\r\n" + 
+				"group by f.fileId;";
 		
 		ArrayList<ViewFile> latesFiles = new ArrayList<ViewFile>();
 		try {
@@ -61,7 +65,7 @@ public class FileAccess {
 			ResultSet rs= statement.executeQuery(sql);
 			ViewFile viewFile=null;
 			while (rs.next()) {
-				viewFile = new ViewFile(rs.getString("fileName"), rs.getString("date"),rs.getInt("cs"),rs.getInt("cns"),rs.getInt("cts"),rs.getInt("ci"),rs.getInt("cr"),rs.getInt("tw"),rs.getInt("cps"));
+				viewFile = new ViewFile(rs.getString("fileName"), rs.getString("date"),rs.getInt("tcs"),rs.getInt("tcns"),rs.getInt("tcts"),rs.getInt("tci"),rs.getInt("tcr"),rs.getInt("ttw"),rs.getInt("tcps"));
 				latesFiles.add(viewFile);
 			}
 			
