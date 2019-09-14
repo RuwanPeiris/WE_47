@@ -24,7 +24,7 @@ public class FileAccess {
 		DateFormat df = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 		String dateTime = df.format(checkFile.getDate());
 
-		String sql = "Insert into file values(" + 0 + ",'" + checkFile.getFileName() + "','" + dateTime +"')";
+		String sql = "Insert into file values(" + 0 + ",'" + checkFile.getFileName() + "','" + dateTime +"',"+checkFile.getCp()+")";
 
 		Statement statement = connection.createStatement();
 		int resp = statement.executeUpdate(sql);

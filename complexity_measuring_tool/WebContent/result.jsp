@@ -17,7 +17,7 @@
 			
 			<div class="table-responsive">
 				<c:set var="count" value="0" scope="page" />
-				<c:set var="cp" value="${cp = 0}" scope="page" />
+				
 				<table
 					class="table table-dark table-striped table-bordered table-hover">
 					<thead>
@@ -48,6 +48,7 @@
 								<td><c:out value="${line.tw}" /></td>
 								<td><c:out value="${line.cps}" /></td>
 								<td><c:out value="${line.cr}" /></td>
+								<c:set var = "cp" scope = "page" value = "${line.cp}"/>
 							</tr>
 						</c:forEach>
 							<tr>
@@ -59,7 +60,7 @@
 								<td><c:out value="" /></td>
 								<td><c:out value="" /></td>
 								<td><c:out value="" /></td>
-								<td><c:out value="${cp}" /></td>
+								<td><c:out value = "${cp}"/></td>
 							</tr>
 					</tbody>
 				</table>
@@ -67,7 +68,7 @@
 		</c:if>
 
 		<c:if test="${oldFileNotFound == 'true'}">
-			<h2>Sorry, No such file found in previous calculations...</h2>
+			<h2>Sorry, No such file found for calculations...</h2>
 		</c:if>
 	</div>
 </body>

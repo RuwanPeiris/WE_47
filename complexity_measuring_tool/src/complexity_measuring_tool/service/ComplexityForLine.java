@@ -48,6 +48,13 @@ public class ComplexityForLine {
 		ArrayList<ViewRecord> viewRecords = new ArrayList<ViewRecord>();
 		final MyStack  myStack = new MyStack();
 		if (checkFile != null) {
+			int tcs = 0;
+			int tci = 0;
+			int tctc = 0;
+			int tcns = 0;
+			int ttw = 0;
+			int tcr = 0;
+			int tcps = 0;
 			// Check line by line in the file
 			for (ViewRecord viewRecord : checkFile.getFileLines()) {
 				if (viewRecord.getValue() != null) {
@@ -58,7 +65,7 @@ public class ComplexityForLine {
 					//tw = calculate this one here
 					//cr = ComplexityRecur.calculateCr(viewRecord.getValue());
 					//cps = ComplexityCps.calculatecps(viewRecord.getValue());
-
+					
 					viewRecord.setCi(ci);
 					viewRecord.setCns(cns);
 					viewRecord.setCts(ctc);
@@ -67,9 +74,19 @@ public class ComplexityForLine {
 					viewRecord.setCr(cr);
 					viewRecord.setCr(cps);
 					viewRecords.add(viewRecord);
+					
+					tcs +=cs;
+					tci +=ci;
+					tctc +=ctc;
+					tcns +=cns;
+					ttw +=tw;
+					tcr +=cr;
+					tcps +=cps;
+					
 				}
 			}
 			checkFile.setFileLines(viewRecords);
+			checkFile.setCp(tci+tcns+tctc+tcs+ttw+tcr+tcps);
 
 			// Save file to database
 			try {

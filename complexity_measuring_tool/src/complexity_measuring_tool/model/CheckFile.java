@@ -21,6 +21,7 @@ public class CheckFile {
 	int cr;//Set complexity of recursion value here
 	int tw;//File total complexity
 	int cps;
+	int cp;
 	
 	public CheckFile() {
 	}
@@ -46,6 +47,24 @@ public class CheckFile {
 		this.cr = cr;
 		this.tw = tw;
 		this.cps = cps;
+	}
+	
+	
+
+	public CheckFile(String fileName, ArrayList<ViewRecord> fileLines, Date date, int cs, int cns, int cts, int ci,
+			int cr, int tw, int cps, int cp) {
+		super();
+		this.fileName = fileName;
+		this.fileLines = fileLines;
+		this.date = date;
+		this.cs = cs;
+		this.cns = cns;
+		this.cts = cts;
+		this.ci = ci;
+		this.cr = cr;
+		this.tw = tw;
+		this.cps = cps;
+		this.cp = cp;
 	}
 
 	public String getFileName() {
@@ -122,6 +141,14 @@ public class CheckFile {
 
 	public void setCps(int cps) {
 		this.cps = cps;
+	}
+
+	public int getCp() {
+		return cp;
+	}
+
+	public void setCp(int cp) {
+		this.cp = cp;
 	}
 	
 	

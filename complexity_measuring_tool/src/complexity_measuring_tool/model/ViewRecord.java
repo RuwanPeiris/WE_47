@@ -17,6 +17,7 @@ public class ViewRecord {
 	int cr;//Set complexity of recursion value here
 	int tw;
 	int cps;
+	int cp;
 	
 	public ViewRecord() {
 		super();
@@ -39,6 +40,21 @@ public class ViewRecord {
 		this.cr = cr;
 		this.tw = tw;
 		this.cps = cps;
+	}
+	
+	
+	public ViewRecord(String date, String value, int cs, int cns, int cts, int ci, int cr, int tw, int cps, int cp) {
+		super();
+		this.date = date;
+		this.value = value;
+		this.cs = cs;
+		this.cns = cns;
+		this.cts = cts;
+		this.ci = ci;
+		this.cr = cr;
+		this.tw = tw;
+		this.cps = cps;
+		this.cp = cp;
 	}
 	public String getDate() {
 		return date;
@@ -93,6 +109,12 @@ public class ViewRecord {
 	}
 	public void setCps(int cps) {
 		this.cps = cps;
+	}
+	public int getCp() {
+		return cp;
+	}
+	public void setCp(int cp) {
+		this.cp = cp;
 	}
 	
 	
