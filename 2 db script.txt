@@ -5,13 +5,8 @@ use measure;
 CREATE TABLE file (
 fileId int not null AUTO_INCREMENT PRIMARY KEY ,
 fileName varchar(100) ,
-date varchar(150) ,
-cs int,
-cns int,
-cts int,
-ci int,
-cr int,
-tw int 
+date varchar(150),
+cp int
 )ENGINE=INNODB;
 
 
@@ -19,11 +14,15 @@ CREATE TABLE records (
 recordId INT NOT NULL AUTO_INCREMENT,
 value VARCHAR(255) NULL,
 fileId INT NOT NULL,
+cs int,
+cns int,
+cts int,
+ci int,
+cr int,
+tw int,
+cps int,
 CONSTRAINT REC_PK PRIMARY KEY(recordId),
 INDEX fileId_idx (fileId ASC),
 CONSTRAINT REC_FK FOREIGN KEY (fileId) REFERENCES file(fileId)
 ON DELETE CASCADE ON UPDATE CASCADE
 )ENGINE=INNODB;
-
-ALTER TABLE file
-ADD COLUMN cps int;
