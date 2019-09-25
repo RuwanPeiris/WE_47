@@ -49,6 +49,7 @@
 									<td><c:out value="${line.tw}" /></td>
 									<td><c:out value="${line.cps}" /></td>
 									<td><c:out value="${line.cr}" /></td>
+									<c:set var = "cp" scope = "page" value = "${line.cp}"/>
 								</tr>
 							</c:forEach>
 							<tr>
@@ -108,6 +109,7 @@
 										<td><c:out value="${line1.tw}" /></td>
 										<td><c:out value="${line1.cps}" /></td>
 										<td><c:out value="${line1.cr}" /></td>
+										<c:set var = "cp1" scope = "page" value = "${line.cp}"/>
 									</tr>
 								</c:forEach>
 								<tr>

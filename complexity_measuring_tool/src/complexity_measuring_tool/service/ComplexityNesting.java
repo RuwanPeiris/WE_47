@@ -24,6 +24,7 @@ public class ComplexityNesting {
 		final Pattern elsePattern = Pattern.compile(CommonParams.REGEX_ELSE);
 		final Pattern lineEndsPattern = Pattern.compile(CommonParams.LINE_ENDS_WITH_CURLY);
 		final Pattern lineStartsPattern = Pattern.compile(CommonParams.LINE_STARTS_WITH_CURLY);
+		final Pattern commentPattern = Pattern.compile(CommonParams.COMMENT_LINE);
 
 		line.trim();// removing all the leading and traling spaces in a line
 
@@ -62,7 +63,8 @@ public class ComplexityNesting {
 			// removing finishing brackets in the stack
 			Matcher lineEndMatcher = lineEndsPattern.matcher(line);
 			Matcher lineStartMatcher = lineStartsPattern.matcher(line);
-			if (myStack.peek() > 0 && (lineEndMatcher.matches() || lineStartMatcher.matches()) ) {
+			Matcher commentMatcher = commentPattern.matcher(line);
+			if (myStack.peek() > 0 && (lineEndMatcher.matches() || lineStartMatcher.matches() || commentMatcher.matches()) ) {
 				myStack.pop();
 			}
 			System.out.println("Stack value : " + myStack.peek() + line);
