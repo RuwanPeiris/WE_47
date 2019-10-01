@@ -72,6 +72,7 @@ form button:active{
   border:0;
 }
 </style>
+<title>Complexity Controller</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -82,8 +83,8 @@ form button:active{
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-                <a href="Home.jsp" class="nav-item nav-link active">Home</a>
-                <a href="Home.jsp" class="nav-item nav-link">Check Complexity</a>
+                <a href="index.jsp" class="nav-item nav-link active">Home</a>
+                <a href="index.jsp" class="nav-item nav-link">Check Complexity</a>
                 <a href="History.jsp" class="nav-item nav-link">Compare Complexity</a>
                 <a href="HistoryList.jsp" class="nav-item nav-link">History</a>
                 <a href="#" class="nav-item nav-link">Feedback</a>

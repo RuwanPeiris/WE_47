@@ -9,7 +9,7 @@ public class CommonParams {
 	
 	public static final int ARRAY_FIRST_ELEMENT = 0;
 	public static final int ARRAY_SECOND_ELEMENT = 1;
-	public static final String LOCAL_UPLOAD_FILE_FOLDER_PATH = "C:/Users/Asus/Desktop/SPM/WE_47/complexity_measuring_tool/WebContent/uploaded-files/";
+	public static final String LOCAL_UPLOAD_FILE_FOLDER_PATH = "C:/Users/Asus/Desktop/SPM Project/WE_47/complexity_measuring_tool/WebContent/uploaded-files/";
 	public static final String REGEX_FOR_LOOP = "(\\s+|)for(\\s+|)\\((\\s|)\\w+\\s+\\w+(\\s+|)=(\\s+|)\\d+;(\\s+|)\\w+(\\s+|)(\\<|\\>|\\<=|\\>=)(\\s+|)\\d+;(\\s+|)\\w+(\\++|\\--)\\)(\\s+|)\\{(\\s|\\n|)((//(\\w|\\s|\\S+|\\d|)+)|)";
 	public static final String REGEX_FOR_EACH = "(\\s+|)for(\\s+|)\\((\\s|)\\w+\\s+\\w+(\\s+|):(\\s+|)\\w+(\\s+|)\\)(\\s+|)\\{(\\s|\\n|)((//(\\w|\\s|\\S+|\\d|)+)|)";
 	public static final String REGEX_WHILE_LOOP = "(\\s+|)while(\\s+|)\\((\\s|)+((\\w+(\\s|)+(\\<|\\>|\\=|\\<=|\\>=)(\\s|)+(\\w+|\\d+|\\w+\\.\\w+\\((\\w+|\\d+)\\)))|(\\w+)|(\\w+\\.\\w+\\((\\w+|)\\)))(\\s+|)\\)(\\s+|)\\{(\\s|\\n|)((//(\\w|\\s|\\S+|\\d|)+)|)";
